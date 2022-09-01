@@ -44,6 +44,7 @@ public:
     GameRoom(QString creater_id);
     ~GameRoom();
 
+    // Get functions
     QString getCreaterId();
     QString getParticipatorId();
     QString getRoomId();
@@ -51,9 +52,13 @@ public:
     GameResult getResult();
     QTime getCreatedTime();
 
+    // Set functions
     void setCreaterId(QString creater_id);
     void setParticipatorId(QString participator_id);
     void setStatus(GameRoomStatus status);
     void setResult(GameResult result);
+
+    // Operator functions
+
 };
 
