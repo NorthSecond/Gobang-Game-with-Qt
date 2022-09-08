@@ -1,4 +1,5 @@
 QT -= gui
+QT += sql
 
 CONFIG += c++17 console
 CONFIG -= app_bundle
@@ -9,7 +10,8 @@ CONFIG -= app_bundle
 
 SOURCES += \
         gameroom.cpp \
-        main.cpp
+        main.cpp \
+        serverdbconnection.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -17,4 +19,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    gameroom.h
+    gameroom.h \
+    serverdbconnection.h
